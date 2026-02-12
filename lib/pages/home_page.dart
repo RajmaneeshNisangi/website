@@ -116,7 +116,8 @@ class _HomePageState extends State<HomePage> {
 
     final box = context.findRenderObject() as RenderBox;
     final local = box.localToGlobal(Offset.zero);
-    final target = _scrollController.offset + local.dy - AppConstants.navbarHeight - 12;
+    final target =
+        _scrollController.offset + local.dy - AppConstants.navbarHeight - 12;
 
     await _scrollController.animateTo(
       target.clamp(0, _scrollController.position.maxScrollExtent),
@@ -156,7 +157,9 @@ class _HomePageState extends State<HomePage> {
                 ),
                 _section(
                   key: _sectionKeys[points]!,
-                  child: const PointsTableSection(rows: AppData.pointsTableRows),
+                  child: const PointsTableSection(
+                    rows: AppData.pointsTableRows,
+                  ),
                 ),
                 _section(
                   key: _sectionKeys[gallery]!,

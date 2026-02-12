@@ -16,11 +16,10 @@ class FooterSection extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            'Contact: +91 90000 12345  |  hello@citychampionscup.com',
-            style: Theme.of(context)
-                .textTheme
-                .bodyMedium
-                ?.copyWith(color: Colors.white70),
+            'Contact: +91 9391550992  |  rajmaneesh.nisangi@gmail.com',
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium?.copyWith(color: Colors.white70),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 12),
@@ -28,18 +27,9 @@ class FooterSection extends StatelessWidget {
             alignment: WrapAlignment.center,
             spacing: 12,
             children: [
-              _SocialChip(
-                label: 'Instagram',
-                url: 'https://instagram.com',
-              ),
-              _SocialChip(
-                label: 'YouTube',
-                url: 'https://youtube.com',
-              ),
-              _SocialChip(
-                label: 'Facebook',
-                url: 'https://facebook.com',
-              ),
+              _SocialChip(label: 'Instagram', url: 'https://instagram.com'),
+              _SocialChip(label: 'YouTube', url: 'https://youtube.com'),
+              _SocialChip(label: 'Facebook', url: 'https://facebook.com'),
             ],
           ),
         ],
@@ -59,7 +49,7 @@ class _SocialChip extends StatelessWidget {
     return ActionChip(
       label: Text(label),
       labelStyle: const TextStyle(
-        color: Colors.white,
+        color: Colors.black,
         fontWeight: FontWeight.w600,
       ),
       backgroundColor: Colors.white.withValues(alpha: 0.12),
